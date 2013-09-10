@@ -45,24 +45,24 @@
 | the active record class
 */
 
-$active_group = 'rad';
+$active_group = 'megatronics';
 $active_record = TRUE;
 
-$db['rad']['hostname'] = 'localhost';
-$db['rad']['username'] = 'root';
-$db['rad']['password'] = '';
-$db['rad']['database'] = 'megatronics';
-$db['rad']['dbdriver'] = 'mysql';
-$db['rad']['dbprefix'] = '';
-$db['rad']['pconnect'] = TRUE;
-$db['rad']['db_debug'] = TRUE;
-$db['rad']['cache_on'] = FALSE;
-$db['rad']['cachedir'] = '';
-$db['rad']['char_set'] = 'utf8';
-$db['rad']['dbcollat'] = 'utf8_general_ci';
-$db['rad']['swap_pre'] = '';
-$db['rad']['autoinit'] = TRUE;
-$db['rad']['stricton'] = FALSE;
+$db['megatronics']['hostname'] = 'localhost';
+$db['megatronics']['username'] = 'root';
+$db['megatronics']['password'] = '';
+$db['megatronics']['database'] = 'megatronics';
+$db['megatronics']['dbdriver'] = 'mysql';
+$db['megatronics']['dbprefix'] = '';
+$db['megatronics']['pconnect'] = TRUE;
+$db['megatronics']['db_debug'] = TRUE;
+$db['megatronics']['cache_on'] = FALSE;
+$db['megatronics']['cachedir'] = '';
+$db['megatronics']['char_set'] = 'utf8';
+$db['megatronics']['dbcollat'] = 'utf8_general_ci';
+$db['megatronics']['swap_pre'] = '';
+$db['megatronics']['autoinit'] = TRUE;
+$db['megatronics']['stricton'] = FALSE;
 
 
 $db['default']['hostname'] = 'localhost';
