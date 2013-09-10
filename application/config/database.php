@@ -45,8 +45,25 @@
 | the active record class
 */
 
-$active_group = 'default';
+$active_group = 'rad';
 $active_record = TRUE;
+
+$db['rad']['hostname'] = 'localhost';
+$db['rad']['username'] = 'root';
+$db['rad']['password'] = '';
+$db['rad']['database'] = 'megatronics';
+$db['rad']['dbdriver'] = 'mysql';
+$db['rad']['dbprefix'] = '';
+$db['rad']['pconnect'] = TRUE;
+$db['rad']['db_debug'] = TRUE;
+$db['rad']['cache_on'] = FALSE;
+$db['rad']['cachedir'] = '';
+$db['rad']['char_set'] = 'utf8';
+$db['rad']['dbcollat'] = 'utf8_general_ci';
+$db['rad']['swap_pre'] = '';
+$db['rad']['autoinit'] = TRUE;
+$db['rad']['stricton'] = FALSE;
+
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = '';
