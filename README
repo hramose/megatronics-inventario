@@ -1,0 +1,52 @@
+# Proyecto Numero 1
+### Megatronics Inventory
+
+#### Caso empresarial
+> La empresa Megatronics, Inc. esta interesada en crear un sistema de inventarios.
+> En los ultimos diez años, la empresa ha relegado la responsabilidad de hacer los inventarios de su bodega y tiendas a empleados sin previa experiencia con estos sistemas.
+
+> Megatronics tiene 5 tiendas departamentales en el momento y abrira una otra en un par de meses adicionalmente una bodega que surte a sus tiendas semanalmente. Tiene 200 proveedores nacionales e internacionales que le entregan mercancia en la bodega.
+
+> Su mercancia esta dividida en categorias, cada producto tiene un SKU unico, precio, costo, descripcion, UPC y numeros de serie unicos para cada unidad.
+
+El CEO desea tener listo el sistema de inventarios en 4 semanas para la apertura de su nueva tienda, los reportes que requiere son:
+
+- Inventario General (Totales)
+- Movimientos de mercancia (Diarios, Semanales)
+- Mulas (Mercancia sin movimiento)
+- Reporte de defectos
+
+Los usuarios requeridos:
+- Super Usuario (Todos los permisos)
+- Capturador de datos (Solo puede agregar a la base de datos)
+- Reporteador (Solo puede leer la base de datos)
+- Gerente (Puede Leer, Modificar y Crear)
+
+
+***
+
+### Identidades:
+
+
+
+
+
+
+### Tablas Requeridas (en SQL):
+
+```sql
+CREATE TABLE IF NOT EXISTS  `ci_sessions` (
+	session_id		varchar(40) 	DEFAULT '0' NOT NULL,
+	ip_address		varchar(45) 	DEFAULT '0' NOT NULL,
+	user_agent		varchar(120) 				NOT NULL,
+	last_activity	int(10) unsigned DEFAULT 0 	NOT NULL,
+	user_data		text						NOT NULL,
+	
+	PRIMARY KEY (session_id),
+	KEY `last_activity_idx` (`last_activity`)
+);
+
+
+```
+
+
