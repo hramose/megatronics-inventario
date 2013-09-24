@@ -64,6 +64,10 @@ $db['megatronics']['swap_pre'] = '';
 $db['megatronics']['autoinit'] = TRUE;
 $db['megatronics']['stricton'] = FALSE;
 
+// Descomentar en caso de usar MAMP (el puerto default es: 3306, pero en mamp es 8889)
+// $db['megatronics']['port'] = 8889;
+// addicionalmente, em MAMP el usuario y contraseña pueden ser: root y root || root y '' (contraseña vacia)
+
 
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = '';

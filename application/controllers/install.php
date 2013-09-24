@@ -8,9 +8,10 @@ class Install extends CI_Controller {
 	{
 		// Llamamos al constructor del controlador (CI_Controller)
 		parent::__construct();
-
 		// Cargamos la clase requerida
 		$this->load->library('migration');
+
+		$this->load->helper('url');
 	}
 
 	/* Metodo generico para la creacion de tablas */
@@ -24,29 +25,18 @@ class Install extends CI_Controller {
 		}
 		else
 		{
-			echo('Database updated and ready to go!');
+			$data['msg'] = 'Database updated and ready to go!';
+			$this->load->view('v_message', $data);
 		}
 	}
 
 	public function reset()
 	{
-		// en caso que no exista el segmento,
-		// el valor de $version sera 0
-		$version = $this->uri->segment(3, 0);
-
-		// reseteamos la version a 0
+		// borramos todo
 		$this->migration->version(0);
 
-		if ($version == 0)
-		{
-			// implementamos la mas nueva si no hay parametro
-			$this->migration->latest();
-		}
-		else
-		{
-			// implementamos $version
-			$this->migration->version($version);
-		}
+		// y nos vamos a la ultima migracion
+		redirect('/Install', 'refresh');
 	}
 
 
