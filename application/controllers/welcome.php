@@ -22,9 +22,11 @@ class Welcome extends CI_Controller {
 
 	public function prueba()
 	{
-		$this->products_m->create('SKU0', 'Nuevo producto', 15);
+		$random_num = rand(1,100);
+		
+		$this->products_m->create('SKU0', 'Nuevo producto', $random_num);
 
-		print_r( $this->products_m->read('list') );
+		 echo (json_encode($this->products_m->read('list')));
 	}
 
 	public function hola()

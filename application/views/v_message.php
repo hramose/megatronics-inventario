@@ -1,6 +1,10 @@
 <?php
 	$this->load->view('inc/header');
+
+	// ternary operator
 	$msg = (isset($msg)) ? $msg : 'No data to show';
+
+
 ?>
 <br><br>
 

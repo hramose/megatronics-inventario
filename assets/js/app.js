@@ -2,8 +2,13 @@ function InventarioCtrl($scope, $http) {
 
   // read
   $scope.getInventory = function() {
-    // $scope.items = 
-    //$http({method: 'GET', url: ''}).success(function(data, status, headers, config) {});
+    var getInventoryURL = base_url + 'Welcome/prueba';
+    console.log(getInventoryURL);
+    $http({method: 'GET', url: getInventoryURL}).success(
+      function(data, status, headers, config) {
+        $scope.items = data;
+      }
+      );
   };
 
   // update
@@ -20,4 +25,6 @@ function InventarioCtrl($scope, $http) {
   $scope.deleteProduct = function(item_id) {
     
   };
+
+  $scope.getInventory();
 }
